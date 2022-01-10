@@ -318,7 +318,7 @@ class PusherEnv3(MujocoEnv, utils.EzPickle):
 
     def step(self, action):
 
-        if self.action_space is None or action.size == 3:
+        if (not isinstance(action, int)) and (self.action_space is None or action.size == 3):
             action = 0
 
         ctrl = 1.3

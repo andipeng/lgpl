@@ -11,7 +11,7 @@ from itertools import combinations, chain
 import sys
 import gym
 from lgpl.utils.getch import getKey
-from lgpl.envs.pusher.pusher_env2 import Corrections2
+from lgpl.envs.pusher.pusher_env3 import Corrections2
 
 if __name__ == "__main__":
     import lgpl.envs.pusher.pusher_env3
@@ -23,6 +23,7 @@ if __name__ == "__main__":
     env.reset()
     env_return = 0
     while True:
+        env.render()
         key = getKey()
 
         if key == 'w':
